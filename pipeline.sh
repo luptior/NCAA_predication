@@ -22,10 +22,10 @@ cmd=''
 # generate opponent table and team table
 echo "generate opponent table and team table"
 if [ ! -e $prev_ofile ] || [ ! -e $prev_tfile ]; then
-    cmd="python Merkle-OTtable.py $prev_team $prev_ofile $prev_tfile &&"
+    cmd="python generate-OTtable.py $prev_team $prev_ofile $prev_tfile &&"
 fi
 if [ ! -e $next_ofile ] || [ ! -e $next_tfile ]; then
-    cmd="${cmd} python Merkle-OTtable.py $next_team $next_ofile $next_tfile &&"
+    cmd="${cmd} python generate-OTtable.py $next_team $next_ofile $next_tfile &&"
 fi
 
 
