@@ -1,6 +1,6 @@
 ## NCAA_predication
 
-Based on Logistic Regression. 
+Use Logistic Regression. 
 
 prediction.py code adapted from 实验楼 https://www.shiyanlou.com/m/paths/ml/courses/782/labs/2647/ .
 
