@@ -1,15 +1,7 @@
-
-# coding: utf-8
-
-# In[14]:
-
-
 import pandas as pd
 import numpy as np
 import sys
 
-
-# In[15]:
 
 try:
     input=sys.argv[1]
@@ -25,15 +17,9 @@ except IndexError:
 read=pd.read_csv(input)
 
 
-# In[16]:
-
-
 team=[]
 for x in read.iloc[:,1].unique():
         team.append(x)
-
-
-# In[17]:
 
 
 Total_O=[]
@@ -62,13 +48,7 @@ O_table.columns=read.columns[2:45]
 O_table.insert(loc=0,column='Team',value=team)
 
 
-# In[19]:
-
-
 O_table.to_csv(t_table,sep=',')
-
-
-# In[20]:
 
 
 Total_T=[]
@@ -85,16 +65,10 @@ for y in team:
     Total_T.append(mean)
 
 
-
-# In[21]:
-
-
 T_table=pd.DataFrame(Total_T)
 T_table.columns=read.columns[2:45]
 T_table.insert(loc=0,column='Team',value=team)
 
-
-# In[22]:
 
 
 T_table.to_csv(o_table,sep=',')
