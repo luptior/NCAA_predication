@@ -1,10 +1,10 @@
 # NCAA_predication
 
-Based on Logistic Regression, 
+Based on Logistic Regression. 
 
-prediction.py code adapted from 实验楼 https://www.shiyanlou.com/m/paths/ml/courses/782/labs/2647/
+prediction.py code adapted from 实验楼 https://www.shiyanlou.com/m/paths/ml/courses/782/labs/2647/ .
 
-data provided by Merkle.
+Data provided by Merkle.
 
 to run, download package, enter package directory and type
 
