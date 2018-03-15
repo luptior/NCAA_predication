@@ -1,15 +1,6 @@
-
-# coding: utf-8
-
-# In[16]:
-
-
 import pandas as pd
 import numpy as np
 import sys
-
-
-# In[18]:
 
 try:
     input=sys.argv[1]
@@ -20,15 +11,7 @@ except:
 
 read=pd.read_csv(input)
 
-
-# In[19]:
-
-
 len(read)
-
-
-# In[31]:
-
 
 s=[]
 for x in range(len(read)):
@@ -41,17 +24,8 @@ for x in range(len(read)):
     
     s.append(l)
 
-
-# In[35]:
-
-
-s
 schedule=pd.DataFrame(s)
 schedule.columns=('Vteam','Hteam')
-
-
-# In[43]:
-
 
 schedule.to_csv(output,sep=',',index = False)
 
