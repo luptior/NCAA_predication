@@ -1,16 +1,8 @@
 
-# coding: utf-8
-
-# In[1]:
-
-
 import pandas as pd
 import numpy as np
 from pandas import Series, DataFrame
 import sys
-
-
-# In[5]:
 
 try:
     input=sys.argv[1]
@@ -24,10 +16,6 @@ player=pd.read_csv(input)
 player.head(n=10)
 player1=player.drop('Unnamed: 0',axis=1)
 
-
-# In[6]:
-
-
 newDF = pd.DataFrame()
 for i in player1['Team'].unique():
     a=pd.DataFrame(player1[player1['Team'] == i].drop(['player','gameid'],axis=1).mean().to_frame().T)
@@ -35,10 +23,6 @@ for i in player1['Team'].unique():
 
 newDF['Team']=player1['Team'].unique()
 new_player=newDF.set_index('Team')
-
-
-# In[7]:
-
 
 new_player.to_csv(output, sep=',')
 
